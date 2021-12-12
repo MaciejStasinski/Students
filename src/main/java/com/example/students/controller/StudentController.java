@@ -89,7 +89,5 @@ public class StudentController {
                     studentRepository.save(studentFromDB);
                     return ResponseEntity.ok().body(studentFromDB);
                 }).orElseGet(() -> ResponseEntity.notFound().build());
-
-
     }
 }

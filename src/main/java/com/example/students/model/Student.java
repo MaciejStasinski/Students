@@ -14,10 +14,11 @@ import javax.validation.constraints.NotNull;
 public class Student {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+
+    @NotNull(message = "Pole imię nie może być puste")
     private String firstName;
     @NotEmpty
     private String lastName;
